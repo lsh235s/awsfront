@@ -58,7 +58,7 @@ function App() {
   return (
     <div style={{ textAlign: 'center', marginTop: '50px', fontFamily: 'Arial', padding: '0 20px' }}>
       <header style={{ marginBottom: '40px' }}>
-        <h1 style={{ color: '#232f3e' }}>☁️ AWS S3 File Integration</h1>
+        <h1 style={{ color: '#232f3e' }}>☁️ AWS S3 File Integration CI/CD Test</h1>
         <p style={{ color: '#666' }}>백엔드를 통해 S3에 안전하게 파일을 업로드하고 미리보기합니다.</p>
       </header>
 
