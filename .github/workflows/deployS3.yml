@@ -2,11 +2,11 @@ name: Deploy Frontend to Amazon S3
 
 on:
   push:
-    branches: [ dev" ]
+    branches: [ "main" ]
 
 env:
   AWS_REGION: ap-northeast-2
-  S3_BUCKET_NAME: sk5h-front # [주의] 배포할 S3 버킷 이름으로 변경해야 합니다.
+  S3_BUCKET_NAME: myapp-frontend-dev-20260429 # [주의] 배포할 S3 버킷 이름으로 변경해야 합니다.
 
 jobs:
   deploy:

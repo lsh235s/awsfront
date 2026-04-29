@@ -2,9 +2,9 @@ name: Terraform GitOps
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "dev" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "dev" ]
 
 env:
   AWS_REGION: ap-northeast-2
