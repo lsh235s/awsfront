@@ -4,168 +4,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Space | Developer Blog</title>
-    <meta name="description" content="고급스러운 디자인의 개인 블로그 페이지입니다. 최신 기술과 일상을 공유합니다.">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@300;400;600;800&display=swap"
-        rel="stylesheet">
-
-    <!-- CSS -->
+    <title>TETRIS</title>
     <link rel="stylesheet" href="assets/css/style.css">
-
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav id="navbar" class="navbar">
-        <div class="container">
-            <a href="#" class="logo">LOG<span>.</span></a>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#posts">Posts</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="menu-toggle" id="mobile-menu">
-                <i data-lucide="menu"></i>
-            </div>
-        </div>
-    </nav>
+    <div class="game-wrapper">
+        <header class="game-header">
+            <h1 class="game-title">TETRIS</h1>
+        </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <h1 class="fade-in">Code, Design & <span>Beyond</span></h1>
-            <p class="fade-in-delay">기술적인 통찰력과 창의적인 아이디어를 기록하는 나만의 공간입니다.</p>
-            <div class="hero-btns fade-in-delay-2">
-                <a href="#posts" class="btn btn-primary">글 읽기</a>
-                <a href="#about" class="btn btn-outline">소개</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Featured Posts Section -->
-    <section id="posts" class="posts">
-        <div class="container">
-            <div class="section-header">
-                <h2>Featured Posts</h2>
-                <div class="line"></div>
-            </div>
-            <div class="posts-grid">
-                <article class="post-card">
-                    <div class="post-img">
-                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800"
-                            alt="Tech Post">
-                    </div>
-                    <div class="post-info">
-                        <span class="category">Tech</span>
-                        <h3>현대적인 웹 개발 트렌드 2024</h3>
-                        <p>최신 프레임워크와 웹 표준에 대한 심도 있는 분석.</p>
-                        <a href="#" class="read-more">Read More <i data-lucide="arrow-right"></i></a>
-                    </div>
-                </article>
-
-                <article class="post-card">
-                    <div class="post-img">
-                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800"
-                            alt="Code Post">
-                    </div>
-                    <div class="post-info">
-                        <span class="category">Coding</span>
-                        <h3>효율적인 클린 코드 작성법</h3>
-                        <p>가독성 좋고 유지보수가 쉬운 코드를 작성하는 5가지 팁.</p>
-                        <a href="#" class="read-more">Read More <i data-lucide="arrow-right"></i></a>
-                    </div>
-                </article>
-
-                <article class="post-card">
-                    <div class="post-img">
-                        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=800"
-                            alt="Design Post">
-                    </div>
-                    <div class="post-info">
-                        <span class="category">Design</span>
-                        <h3>미니멀리즘과 UI/UX 디자인</h3>
-                        <p>사용자 경험을 극대화하는 단순함의 미학.</p>
-                        <a href="#" class="read-more">Read More <i data-lucide="arrow-right"></i></a>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-wrapper">
-                <div class="about-img">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800"
-                        alt="Profile Image">
+        <div class="game-container">
+            <!-- Left panel -->
+            <div class="side-panel left-panel">
+                <div class="info-box">
+                    <div class="info-label">SCORE</div>
+                    <div class="info-value" id="score">0</div>
                 </div>
-                <div class="about-text">
-                    <h2>About Me</h2>
-                    <p>안녕하세요! 문제를 해결하고 새로운 가치를 창출하는 것을 좋아하는 개발자입니다. 복잡한 시스템을 단순하게 만드는 일에 열정을 가지고 있으며, 항상 배우고 성장하려 노력합니다.
-                    </p>
-                    <div class="skills">
-                        <span class="skill-tag">HTML/CSS</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">UI/UX Design</span>
-                        <span class="skill-tag">Productivity</span>
+                <div class="info-box">
+                    <div class="info-label">LEVEL</div>
+                    <div class="info-value" id="level">1</div>
+                </div>
+                <div class="info-box">
+                    <div class="info-label">LINES</div>
+                    <div class="info-value" id="lines">0</div>
+                </div>
+            </div>
+
+            <!-- Game board -->
+            <div class="board-wrapper">
+                <canvas id="board" width="300" height="600"></canvas>
+                <div class="overlay" id="overlay">
+                    <div class="overlay-content">
+                        <div class="overlay-title" id="overlay-title">TETRIS</div>
+                        <div class="overlay-sub" id="overlay-sub">조작 방법</div>
+                        <div class="controls-hint">
+                            <div>← → 이동</div>
+                            <div>↑ 회전</div>
+                            <div>↓ 빠르게</div>
+                            <div>SPACE 즉시 낙하</div>
+                        </div>
+                        <button class="btn-start" id="btn-start">게임 시작</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right panel -->
+            <div class="side-panel right-panel">
+                <div class="info-box">
+                    <div class="info-label">NEXT</div>
+                    <canvas id="next-canvas" width="120" height="120"></canvas>
+                </div>
+                <div class="info-box">
+                    <div class="info-label">HOLD</div>
+                    <canvas id="hold-canvas" width="120" height="120"></canvas>
+                </div>
+                <div class="info-box key-guide">
+                    <div class="info-label">KEYS</div>
+                    <div class="key-list">
+                        <div class="key-item"><kbd>←→</kbd> 이동</div>
+                        <div class="key-item"><kbd>↑</kbd> 회전</div>
+                        <div class="key-item"><kbd>↓</kbd> 소프트</div>
+                        <div class="key-item"><kbd>SPC</kbd> 하드낙하</div>
+                        <div class="key-item"><kbd>C</kbd> 홀드</div>
+                        <div class="key-item"><kbd>P</kbd> 일시정지</div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="contact-card">
-                <h2>Let's Talk</h2>
-                <p>새로운 프로젝트나 협업 제안은 언제나 환영입니다.</p>
-                <form id="contact-form">
-                    <div class="form-group">
-                        <input type="text" placeholder="이름" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="이메일" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="메시지" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-block">보내기</button>
-                </form>
+        <!-- Mobile controls -->
+        <div class="mobile-controls">
+            <div class="mobile-row">
+                <button class="mobile-btn" id="btn-hold">HOLD</button>
+                <button class="mobile-btn" id="btn-rotate">↑ 회전</button>
+                <button class="mobile-btn" id="btn-pause">PAUSE</button>
+            </div>
+            <div class="mobile-row">
+                <button class="mobile-btn" id="btn-left">←</button>
+                <button class="mobile-btn" id="btn-down">↓</button>
+                <button class="mobile-btn" id="btn-right">→</button>
+            </div>
+            <div class="mobile-row">
+                <button class="mobile-btn wide" id="btn-drop">SPACE (즉시 낙하)</button>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2024 YourName. All rights reserved.</p>
-                <div class="social-links">
-                    <a href="#"><i data-lucide="github"></i></a>
-                    <a href="#"><i data-lucide="twitter"></i></a>
-                    <a href="#"><i data-lucide="linkedin"></i></a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- JS -->
     <script src="assets/js/main.js"></script>
-    <script>
-        // Initialize Lucide icons
-        lucide.createIcons();
-    </script>
 </body>
 
 </html>
